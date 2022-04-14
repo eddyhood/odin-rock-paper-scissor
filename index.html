@@ -4,9 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Rock, Paper, Scissors!</title>
   </head>
   <body>
+    <header>
+      <img src="./images/logo.png" alt="A logo of three hands making the shapes for rock, paper, and scissors" class="logo">
+    </header>
+    <main class="gameZone">
+      <section class="user">
+        <h3>User Name</h3>
+        <div class="card">3</div>
+        <p class="move">Rock</p>
+      </section>
+      <section class="centerGame">
+        <h2>Choose Your Weaopon</h2>
+        <p class="gameTracker">Game 1 of 5</p>
+        <section class="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </section>
+        <button>Play Again</button>
+      </section>
+      <section class="computer">
+        <h3>Computer</h3>
+        <div class="card">2</div>
+        <p class="move">Rock</p>
+      </section>
+    </main>
+    <footer>
+      <p>Built by iameddy</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

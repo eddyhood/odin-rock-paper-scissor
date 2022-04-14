@@ -1,0 +1,41 @@
+/*Colors
+  - Primary light - #F2F1E8
+  - Primary dark - #050533
+  - Highlight blue - #0D698B
+  - Highlight red - #E34234
+  */
+
+* {
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin-top: 0 0;
+    font-family: League Spartan, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+} 
+
+/*Typography*/
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+header {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo {
+    width: 30VW;
+    height: auto;
+}
+
