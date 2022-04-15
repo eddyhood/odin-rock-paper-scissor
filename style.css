@@ -10,12 +10,19 @@
 }
 
 body {
-    margin-top: 0 0;
+    margin: 0px 0px;
     font-family: League Spartan, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 } 
 
 /*Typography*/
+
+h1, h2, h3 {
+    color: gray;
+}
 h1 {
     font-size: 70px;
 }
@@ -30,12 +37,78 @@ h3 {
 
 header {
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
+    background: #F2F1E8;
 }
 
 .logo {
-    width: 30VW;
-    height: auto;
+    width: auto;
+    height: 150px;
+    margin: 15px;
 }
 
+.gameZone {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+    flex: 1;
+}
+
+.cards {
+    display: flex;
+    flex: row;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 150px;
+    height: 150px;
+    font-weight: 700;
+    font-size: 60px;
+    flex: 1;
+}   
+.user .card {
+    background-color: #0D698B;
+}
+
+.computer .card {
+    background-color: #E34234;
+}
+
+.user, .computer, .centerGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.choice {
+    width: 150px;
+    height: 150px;
+    background-color: #F2F1E8;
+    border: 1px solid #050533;
+}
+
+footer {
+    background-color: #050533;
+    flex-shrink: 0;
+    min-height: 75px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}       
+
+button {
+    background-color: #050533;
+    color: white;
+    font-size: bold;
+    font-size: 20px;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 25px;
+}
