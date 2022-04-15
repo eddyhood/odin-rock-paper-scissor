@@ -45,20 +45,18 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
+
+
 //Game play with 5 rounds and a declared winner
 function game() {
     for (let i = 0; i < 5; i++) {
-        const rock = document.getElementById('rock');
-        const paper = document.getElementById('paper');
-        const scissor = document.getElementById('scissors');
-        console.log(scissors);
-        // player = prompt('Type: rock, paper, or scissors.').toLowerCase();
-        // rock.addEventListener('click', {
-        //     return player;
-        // })
+        //Apply both contestant's choices
         computer = computerPlay();
-        console.log(playRound(player, computer));
-        console.log('score: Player - ' + playerScore + ', Computer - ' + computerScore)
+    
+       
+        // console.log(playRound(player, computer));
+        // console.log('score: Player - ' + playerScore + ', Computer - ' + computerScore)
 
     } if(playerScore > computerScore) {
         alert('You win! The computer feels shame.');
@@ -67,4 +65,22 @@ function game() {
     }
 }
 
-game()
+// game()
+
+//Declare variables for user choices
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+
+//Add event listeners
+rock.addEventListener('click',() => {
+    player = 'rock';
+})
+
+paper.addEventListener('click',() => {
+    player = 'paper';
+})
+
+scissors.addEventListener('click',() => {
+    player = 'scissors';
+})
