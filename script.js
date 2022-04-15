@@ -72,17 +72,33 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
+function onClick(choice) {
+    player = string(choice);
+    computer = computerPlay();
+    playRound(player, computer);
+
+}
+
 //Add event listeners & play a round
 rock.addEventListener('click',() => {
     player = 'rock';
     computer = computerPlay()
     playRound(player, computer);
+    console.log('score: Player - ' + playerScore + ', Computer - ' + computerScore)
+})
+
+rock.addEventListener('click',() => {
+    player = 'rock';
+    computer = computerPlay()
+    playRound(player, computer);
+    console.log('score: Player - ' + playerScore + ', Computer - ' + computerScore)
 })
 
 paper.addEventListener('click',() => {
     player = 'paper';
     computer = computerPlay()
     playRound(player, computer);
+    console.log('score: Player - ' + playerScore + ', Computer - ' + computerScore)
 })
 
 scissors.addEventListener('click',() => {
