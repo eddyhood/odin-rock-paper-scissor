@@ -69,8 +69,8 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
-    width: 150px;
-    height: 150px;
+    width: 151px;
+    height: 151px;
     font-weight: 700;
     font-size: 60px;
     flex: none;
@@ -89,6 +89,9 @@ header {
     align-items: center;
 }
 
+.user, .computer {
+    margin-top: 84px;
+}
 .choiceContainer {
     width: 150px;
     height: 150px;
