@@ -92,6 +92,15 @@ header {
 .user, .computer {
     margin-top: 84px;
 }
+
+.user{
+    order: -2;
+}
+
+.centerGame {
+    order: -1;
+}
+
 .choiceContainer {
     width: 150px;
     height: 150px;
@@ -130,7 +139,83 @@ button:hover {
 }
 
 .choiceContainer:hover {
-    transform: scale(1.1);
+    transform: scale(1.025);
     transition-duration: 500ms;
     background-color: #e3e2d9;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 830px) {
+    .gameZone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 15px;
+        flex: 1;
+    }
+    .cards {
+        flex-direction: column;
+
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 700;
+        font-size: 60px;
+        flex: .2;
+        order: 1;
+        min-width: 75px;
+    }  
+    
+    .choiceContainer, .card {
+        width: 80vw;
+        height: 25px;
+        padding: 20px;
+    }
+
+    .choiceContainer{
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .user {
+        order: -2;
+        margin: 0;
+    }
+
+    .computer{
+        order: -1;
+    }
+
+    .user, .computer {
+        margin: 15px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    button {
+        margin-bottom: 25px;
+    }
+
+    header {
+        max-height: 150px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 21px;
+    }
+
+    
+    }
+
 }
