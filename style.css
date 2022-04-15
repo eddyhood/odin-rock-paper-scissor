@@ -61,7 +61,7 @@ header {
 .cards {
     display: flex;
     flex: row;
-    gap: 10px;
+    gap: 15px;
 }
 
 .card {
@@ -118,8 +118,19 @@ button {
     color: #050533;
     font-size: bold;
     font-size: 20px;
-    padding: 1rem 2rem;
+    padding: 8px 20px;
     border: #050533 solid 1px;
-    border-radius: 1rem;
+    border-radius: 5px;
     margin-top: 25px;
+}
+
+button:hover {
+    font-weight: 700;
+    transition-duration: 500ms;
+}
+
+.choiceContainer:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    background-color: #e3e2d9;
 }
