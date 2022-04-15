@@ -120,6 +120,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
 }       
 
 button {
@@ -166,7 +167,7 @@ button:hover {
         align-items: center;
         color: white;
         font-weight: 700;
-        font-size: 60px;
+        font-size: 30px;
         flex: .2;
         order: 1;
         min-width: 75px;
@@ -175,7 +176,9 @@ button:hover {
     .choiceContainer, .card {
         width: 80vw;
         height: 25px;
-        padding: 20px;
+        padding: 13px;
+        justify-content: center;
+        align-items: center;
     }
 
     .choiceContainer{
@@ -195,9 +198,10 @@ button:hover {
     .user, .computer {
         margin: 15px;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 15px;
+        width: 60vw;
     }
 
     button {
@@ -217,5 +221,3 @@ button:hover {
 
     
     }
-
-}
