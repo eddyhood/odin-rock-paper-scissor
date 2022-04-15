@@ -72,15 +72,23 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
-//Add event listeners
+//Add event listeners & play a round
 rock.addEventListener('click',() => {
     player = 'rock';
+    computer = computerPlay()
+    playRound(player, computer);
 })
 
 paper.addEventListener('click',() => {
     player = 'paper';
+    computer = computerPlay()
+    playRound(player, computer);
 })
 
 scissors.addEventListener('click',() => {
     player = 'scissors';
+    computer = computerPlay()
+    playRound(player, computer);
 })
+
+
