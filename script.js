@@ -48,7 +48,14 @@ function playRound(playerSelection, computerSelection) {
 //Game play with 5 rounds and a declared winner
 function game() {
     for (let i = 0; i < 5; i++) {
-        player = prompt('Type: rock, paper, or scissors.').toLowerCase();
+        const rock = document.getElementById('rock');
+        const paper = document.getElementById('paper');
+        const scissor = document.getElementById('scissors');
+        console.log(scissors);
+        // player = prompt('Type: rock, paper, or scissors.').toLowerCase();
+        // rock.addEventListener('click', {
+        //     return player;
+        // })
         computer = computerPlay();
         console.log(playRound(player, computer));
         console.log('score: Player - ' + playerScore + ', Computer - ' + computerScore)
