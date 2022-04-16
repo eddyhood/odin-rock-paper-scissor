@@ -88,10 +88,13 @@ function playRound(playerSelection, computerSelection) {
 function declareWinner() {
     if(playerScore > computerScore) {
         gameTitle.innerText = 'You Win!'
+        gameTitle.style.color = '#0D698B'
     }else if(playerScore < computerScore) {
         gameTitle.innerText = 'The Computer Wins. Try Again.'
+        gameTitle.style.color = '#E34234'
     }else{
         gameTitle.innerText = 'It\'s a Tie.'
+        gameTitle.style.color = 'black'
     }
 }
 
