@@ -44,6 +44,7 @@ function getChoice(choice) {
     if(gameCount <= 4) {
         playRound(player, computer);
         gameCount += 1;
+        updateScoreBoard();
     }else {
         playRound(player, computer);
         declareWinner();
@@ -95,7 +96,20 @@ function declareWinner() {
 function gameReset() {
     playerScore = 0;
     computerScore = 0;
+    updateScoreBoard();
     gameCount = 1;
 }
+
+
+//Update the visual aspects of the game
+const userScoreBoard = document.getElementById('userScoreBoard');
+const computerScoreBoard = document.getElementById('computerScoreBoard');
+
+function updateScoreBoard() {
+    userScoreBoard.innerText = playerScore;
+    computerScoreBoard.innerText = computerScore;
+
+}
+
 
 
