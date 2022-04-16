@@ -145,6 +145,12 @@ button:hover {
     background-color: #e3e2d9;
 }
 
+#referee, #gameTracker {
+    font-size: 30px;
+    color: gray;
+}
+
+
 /* Media Queries */
 
 @media screen and (max-width: 830px) {
@@ -219,5 +225,4 @@ button:hover {
         font-size: 21px;
     }
 
-    
     }
