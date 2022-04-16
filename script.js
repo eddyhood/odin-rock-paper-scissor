@@ -101,6 +101,9 @@ function declareWinner() {
 function gameReset() {
     playerScore = 0;
     computerScore = 0;
+    userMove.innerText = ''
+    computerMove.innerText = ''
+    referee.innerText = ''
     updateScoreBoard();
     gameCount = 1;
 }
@@ -134,4 +137,8 @@ function displayMove(player, computer) {
 }
 
 
+const resetButton = document.querySelector('button');
 
+resetButton.addEventListener('click', () => {
+    gameReset();
+})
