@@ -49,8 +49,8 @@ function getChoice(choice) {
     }else {
         playRound(player, computer);
         displayMove(player, computer);
+        updateScoreBoard();
         declareWinner();
-        gameReset();
     }
 }
 
@@ -87,11 +87,11 @@ function playRound(playerSelection, computerSelection) {
 
 function declareWinner() {
     if(playerScore > computerScore) {
-        alert('You\'re a winner!');
+        gameTitle.innerText = 'You Win!'
     }else if(playerScore < computerScore) {
-        alert('Computer wins');
+        gameTitle.innerText = 'The Computer Wins. Try Again.'
     }else{
-        alert('It\'s a tie!')
+        gameTitle.innerText = 'It\'s a Tie.'
     }
 }
 
@@ -113,12 +113,14 @@ function updateScoreBoard() {
 
 }
 
+const gameTitle = document.getElementById('gameTitle');
 const userMove = document.getElementById('userMove');
 const computerMove = document.getElementById('computerMove');
 const referee = document.getElementById('referee');
 
 
-//set initial value of moves to an empty string
+//set initial value of game text
+gameTitle.innerText = 'Choose Your Weapon!'
 userMove.innerText = ''
 computerMove.innerText = ''
 referee.innerText = ''
