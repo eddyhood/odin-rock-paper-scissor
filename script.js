@@ -116,10 +116,12 @@ const computerScoreBoard = document.getElementById('computerScoreBoard');
 function updateScoreBoard() {
     userScoreBoard.innerText = playerScore;
     computerScoreBoard.innerText = computerScore;
+    gameTracker.innerText = 'Game ' + gameCount + ' of 5' 
 
 }
 
 const gameTitle = document.getElementById('gameTitle');
+const gameTracker = document.getElementById('gameTracker');
 const userMove = document.getElementById('userMove');
 const computerMove = document.getElementById('computerMove');
 const referee = document.getElementById('referee');
@@ -127,6 +129,7 @@ const referee = document.getElementById('referee');
 
 //set initial value of game text
 gameTitle.innerText = 'Choose Your Weapon!'
+gameTracker.innerText = 'Game ' + gameCount + ' of 5' 
 userMove.innerText = ''
 computerMove.innerText = ''
 referee.innerText = ''
