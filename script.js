@@ -45,8 +45,10 @@ function getChoice(choice) {
         playRound(player, computer);
         gameCount += 1;
         updateScoreBoard();
+        displayMove(player, computer);
     }else {
         playRound(player, computer);
+        displayMove(player, computer);
         declareWinner();
         gameReset();
     }
@@ -56,30 +58,30 @@ function getChoice(choice) {
 function playRound(playerSelection, computerSelection) {
     if(player === 'rock' && computer ==='scissors') {
         playerScore++;
-        console.log('You win! Rock beats scissors.');
+        referee.innerText = 'You win! Rock beats scissors.';
     }else if(player === 'rock' && computer ==='paper') {
         computerScore ++;
-        console.log('You lose! Paper beats rock.');
+        referee.innerText = 'You lose! Paper beats rock.';
     }else if(player === 'rock' && computer === 'rock') {
-        console.log('It\'s a tie. Rock = rock.');
+        referee.innerText = 'It\'s a tie. Rock = rock.';
     }else if(player === 'paper' && computer === 'rock') {
         playerScore ++;
-        console.log('You win! Paper beats rock.');
+        referee.innerText = 'You win! Paper beats rock.';
     }else if(player === 'paper' && computer === 'scissors') {
         computerScore ++;
-        console.log('You lose! Scissors beats paper.');
+        referee.innerText = 'You lose! Scissors beats paper.';
     }else if(player === 'paper' && computer === 'paper') {
-        console.log('It\s a tie. Paper = paper.');
+        referee.innerText = 'It\s a tie. Paper = paper.';
     }else if(player === 'scissors' && computer ==='paper') {
         playerScore++;
-        console.log('You win! Scissors beats paper.');
+        referee.innerText = 'You win! Scissors beats paper.';
     }else if(player === 'scissors' && computer ==='rock') {
         computerScore++;
-        console.log('You lose! Rock beats scissors.');
+        referee.innerText = 'You lose! Rock beats scissors.';
     }else if(player === 'scissors' && computer === 'scissors'){
-        console.log('It\'s a tie! Scissors = scissors.');
+        referee.innerText = 'It\'s a tie! Scissors = scissors.';
     }else {
-        console.log('Hmmm, something went wrong. Try again.');
+        referee.innerText = 'Hmmm, something went wrong. Try again.';
     }
 }
 
@@ -109,6 +111,21 @@ function updateScoreBoard() {
     userScoreBoard.innerText = playerScore;
     computerScoreBoard.innerText = computerScore;
 
+}
+
+const userMove = document.getElementById('userMove');
+const computerMove = document.getElementById('computerMove');
+const referee = document.getElementById('referee');
+
+
+//set initial value of moves to an empty string
+userMove.innerText = ''
+computerMove.innerText = ''
+referee.innerText = ''
+
+function displayMove(player, computer) {
+    userMove.innerText = player;
+    computerMove.innerText = computer;
 }
 
 
