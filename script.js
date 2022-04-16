@@ -2,32 +2,39 @@
 let player;
 let computer;
 
-//Keep track of score
-let playerScore = 0
-let computerScore = 0
-
 //Establish game setting
 gameCount = 1;
+let playerScore = 0
+let computerScore = 0
+const referee = document.getElementById('referee');
 
+//Update the visual aspects of the game
+const userScoreBoard = document.getElementById('userScoreBoard');
+const computerScoreBoard = document.getElementById('computerScoreBoard');
+const gameTitle = document.getElementById('gameTitle');
+const gameTracker = document.getElementById('gameTracker');
+const userMove = document.getElementById('userMove');
+const computerMove = document.getElementById('computerMove');
+
+const centerGame = document.getElementsByClassName('cards')[0]
+console.log(centerGame)
 //Declare variables for user choices
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 
+
 //Add event listeners & play a round
-rock.addEventListener('click',() => {
+rock.addEventListener('click', () => {
     getChoice('rock');
-    console.log('player' + playerScore + 'computer' + computerScore);
-})
+});
 
 paper.addEventListener('click',() => {
     getChoice('paper');
-    console.log('player' + playerScore + 'computer' + computerScore);
 })
 
 scissors.addEventListener('click',() => {
     getChoice('scissors');
-    console.log('player' + playerScore + 'computer' + computerScore);
 })
 
 
@@ -37,11 +44,12 @@ function computerPlay() {
     let computerMove = moveOptions[Math.floor(Math.random()*moveOptions.length)];
     return computerMove;
 }
+
 //Get player's choice
 function getChoice(choice) {
     player = choice;
     computer = computerPlay()
-    if(gameCount <= 4) {
+    if(gameCount <= 3) {
         playRound(player, computer);
         gameCount += 1;
         updateScoreBoard();
@@ -86,6 +94,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function declareWinner() {
+    centerGame.style.display = 'none';
+    gameTracker.style.display = 'none';
+    referee.style.display = 'none';
     if(playerScore > computerScore) {
         gameTitle.innerText = 'You Win!'
         gameTitle.style.color = '#0D698B'
@@ -99,19 +110,22 @@ function declareWinner() {
 }
 
 function gameReset() {
+    gameCount = 1;
     playerScore = 0;
     computerScore = 0;
     userMove.innerText = ''
     computerMove.innerText = ''
     referee.innerText = ''
+    userScoreBoard.innerText = 0;
+    computerScoreBoard.innerText = 0;
+    centerGame.style.display = 'flex';
+    gameTracker.style.display = 'flex';
+    referee.style.display = 'flex';
     updateScoreBoard();
-    gameCount = 1;
 }
 
 
-//Update the visual aspects of the game
-const userScoreBoard = document.getElementById('userScoreBoard');
-const computerScoreBoard = document.getElementById('computerScoreBoard');
+
 
 function updateScoreBoard() {
     userScoreBoard.innerText = playerScore;
@@ -120,11 +134,8 @@ function updateScoreBoard() {
 
 }
 
-const gameTitle = document.getElementById('gameTitle');
-const gameTracker = document.getElementById('gameTracker');
-const userMove = document.getElementById('userMove');
-const computerMove = document.getElementById('computerMove');
-const referee = document.getElementById('referee');
+
+
 
 
 //set initial value of game text
